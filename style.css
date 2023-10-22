@@ -1,0 +1,81 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+:root {
+    --clr-bluish: #3c5077;
+    --clr-bluish-2: #036099;
+    --clr-white: #fff;
+    --clr-light-gray: #333;
+    --clr-green: #33d692;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-bluish);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 50px;
+    border-radius: 50px;
+    background-color: var(--clr-white);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.popup {
+    width: 200px;
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.05);
+    text-align: center;
+    padding: 0 20px 20px;
+    color: var(--clr-light-gray);
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.popup p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+} 
+
+.popup .material-symbols-outlined {
+    font-size: 4rem; 
+    margin-top: -20%;
+    border: 2px solid black;
+    border-radius: 3rem;
+    background-color: var(--clr-bluish-2);
+    color: var(--clr-white);
+    box-shadow: 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px 0;
+    background: var(--clr-green);
+    color: var(--clr-white);
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.popup-open {
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
